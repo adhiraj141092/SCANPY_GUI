@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--    <script>-->
+<!--      function checkFileType() {-->
+<!--        // Get the file input element-->
+<!--        var fileInput = document.getElementById('fileInput');-->
+
+<!--        // Get the file object-->
+<!--        var file = fileInput.files[0];-->
+
+<!--        // Check if a file was selected-->
+<!--        if (file) {-->
+<!--          // Get the file name-->
+<!--          var fileName = file.name;-->
+
+<!--          // Get the file extension-->
+<!--          var fileExtension = fileName.split('.').pop().toLowerCase();-->
+
+<!--          // Check if the file extension is allowed-->
+<!--          if (fileExtension != 'h5') {-->
+<!--            alert('Only .h5 files are allowed for now.');-->
+<!--            fileInput.value = ''; // Clear the file input-->
+<!--          }-->
+<!--        }-->
+<!--      }-->
+
+<!--      function onSubmit() {-->
+<!--        // Display the loading spinner-->
+<!--        document.getElementById('loading').style.display = 'block';-->
+
+<!--        // Submit the form-->
+<!--        document.getElementById('form').submit();-->
+<!--      }-->
+<!--    </script>-->
+
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<div class="post">
+
+    <h3>File upload and Preprocessing:</h3>
+    <form id="form" action="{{ url_for('process_form') }}" method="post" enctype="multipart/form-data">
+
+      <label for="fileInput">File:</label>
+      <input type="file" id="fileInput" name="file" onchange="checkFileType()"><br>
+
+      <input type="button" value="Submit" onclick="onSubmit()">
+    </form>
+
+    <!-- Loading spinner -->
+    <div id="loading">
+      <img src="{{ url_for('static', filename='spinner.gif') }}">
+      <p>Loading...</p>
+    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

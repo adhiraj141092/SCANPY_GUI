@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <!-- Loading spinner -->
+<h3>10x h5 Uploaded successfully</h3>
+
+    <p>
+        <h4>File Details:</h4>
+        <b>{{det_a}}</b>
+    </p>
+<h4>Head of the file</h4>
+<pre>
+    {{data}}
+</pre>
+    <h3>Highest Expressed Genes:</h3>
+<img src="{{ plot }}" alt="beleg" height="250px"><br>
+
+<div class="alert alert-primary" role="alert" style="word-wrap: break-word;">
+<h1>Preprocessing</h1>
+<h1>Number of cells:{{cell}} Number of genes:{{genes}}</h1>
+    <h3>File upload and Preprocessing:</h3>
+        <h1></h1>
+    <form action=/prep method="post">
+  <label for="name">Minimum number of Cells:</label>
+  <input type="number" id="cell" name="cell" value="3"><br>
+
+  <label for="mn_gene">Minimum Genes Expressed:</label>
+  <input type="number" id="mn_gene" name="mn_gene" value="200"><br>
+
+  <label for="mt">Filter Mitochondrial Genes:</label>
+  <input type="text" id="mt" name="mt" value="MT-"><br>
+
+  <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+{% endblock content %}

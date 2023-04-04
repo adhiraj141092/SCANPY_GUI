@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<img src="{{ img }}" alt="beleg" height="500px"><br>
+<h1>Select a Gene</h1>
+	<form action=analysis3 method="post">
+		<label for="gene1">Select a gene:</label>
+		<select name="gene1">
+			{% for gene in genes %}
+			<option value="{{ gene }}">{{ gene }}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+
+<h3>Save your progress</h3>
+<form method="POST" action="{{ url_for('analysis3') }}">
+      <label for="file_name">Enter a filename:</label>
+      <input type="text" name="file_name" id="file_name" required>
+      <button type="submit">Save</button>
+    </form>
+
+{% endblock content %}

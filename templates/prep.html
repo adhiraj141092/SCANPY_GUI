@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<h1>Preprocessing</h1>
+<h1>Number of cells:{{cell}} <br> Number of genes:{{genes}}</h1></h1>
+<img src="{{ plot }}" alt="beleg" height="250px"><br>
+<img src="{{ plt1 }}" alt="beleg" height="250px"><br>
+<pre>{{det_a}}</pre>
+<pre>{{data}}</pre>
+
+<div class="alert alert-primary" role="alert" style="word-wrap: break-word;">
+    <h3>File upload and Preprocessing:</h3>
+        <h1></h1>
+    <form action=/prep method="post">
+  <label for="name">Minimum number of Cells:</label>
+  <input type="number" id="cell" name="cell" value="3"><br>
+
+  <label for="mn_gene">Minimum Genes Expressed:</label>
+  <input type="number" id="mn_gene" name="mn_gene" value="200"><br>
+
+  <label for="mt">Filter Mitochondrial Genes:</label>
+  <input type="text" id="mt" name="mt" value="MT-"><br>
+
+
+  <label for="n_genes">Set maximum no. genes by count:</label>
+  <input type="number" id="n_genes" name="n_genes" value="2500"><br>
+
+  <label for="pct_mt">Set maximum no. pct mt genes:</label>
+  <input type="number" id="pct_mt" name="pct_mt" value="5"><br>
+
+
+        <input type="submit" value="Submit">
+ </form>
+</div>
+
+<div class="alert alert-warning" role="alert" style="word-wrap: break-word;">
+ <form action=/analysis method="post">
+     <h2>Proceed to Next Step</h2>
+      <h4>Normalisation</h4>
+
+    <label for="norm">Counts per cell after:</label>
+  <input type="number" id="norm" name="norm" value="10000"><br>
+    <h4>Logarithm transformation</h4>
+<input type="checkbox" id="log" name="log" value="1">
+  <label for="log"> Logarithmize the data</label><br>
+    <h4>Highly variable genes</h4>
+<input type="checkbox" id="hvg" name="hvg" value="1">
+  <label for="hvg"> Calculate the highly variable genes</label><br>
+       <label for="min_mean">Minimum Mean:</label>
+  <input type="number" id="min_mean" name="min_mean" value="0.0125"><br>
+     <label for="max_mean">Maximum Mean:</label>
+  <input type="number" id="max_mean" name="max_mean" value="3"><br>
+          <label for="min_disp">Minimum Dispersion</label>
+  <input type="number" id="min_disp" name="min_disp" value="0.5"><br>
+
+     <input type="submit" value="Submit">
+</form>
+</div>
+{% endblock content %}

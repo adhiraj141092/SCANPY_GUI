@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>Number of cells:{{cell}} <br> Number of genes:{{genes}}</h1></h1>
+<h3>Dimentional Reduction</h3>
+<h4>Principal Component Analysis</h4>
+
+<form action=/analysis2 method="post">
+<input type="checkbox" id="pca" name="pca" value="1">
+  <label for="pca">Calculate PCA</label><br>
+<input type="checkbox" id="nbr" name="nbr" value="1">
+  <label for="nbr">Calculate the neighborhood graph of cells based on PCA components</label><br>
+<input type="checkbox" id="umap" name="umap" value="1">
+  <label for="umap">Perform UMAP for visualization</label><br>
+<input type="checkbox" id="loalgo" name="loalgo" value="1">
+  <label for="loalgo">Perform clustering using the Louvain algorithm</label><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock content %}

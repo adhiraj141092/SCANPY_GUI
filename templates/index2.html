@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<title>Preprocess H5 File</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+      function checkFileType() {
+        // Get the file input element
+        var fileInput = document.getElementById('fileInput');
+
+        // Get the file object
+        var file = fileInput.files[0];
+
+        // Check if a file was selected
+        if (file) {
+          // Get the file name
+          var fileName = file.name;
+
+          // Get the file extension
+          var fileExtension = fileName.split('.').pop().toLowerCase();
+
+          // Check if the file extension is allowed
+          if (fileExtension != 'h5') {
+            alert('Only .h5 files are allowed for now.');
+            fileInput.value = ''; // Clear the file input
+          }
+        }
+      }
+
+      function onSubmit() {
+        // Display the loading spinner
+        document.getElementById('loading').style.display = 'block';
+
+        // Submit the form
+        document.getElementById('form').submit();
+      }
+    </script>
+    <style>
+      #loading {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+      }
+
+      #loading img {
+        margin-top: 20%;
+      }
+    </style>
+</head>
+
+<body>
+	<h1>Single Cell RNA-Seq Analysis</h1>
+    <h3>File upload and Preprocessing:</h3>
+        <h1></h1>
+    <form action="/getdata" method="post" enctype="multipart/form-data" name="form2">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+
+
+
+{% endblock content %}

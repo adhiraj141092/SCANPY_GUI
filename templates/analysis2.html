@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<h3>Principal Component Analysis</h3>
+	<img src="{{ img2 }}" alt="beleg" height="500px"><br>
+<h1>Select a Gene</h1>
+	<form action=analysis2 method="post">
+		<label for="gene">Select a gene:</label>
+		<select name="gene">
+			{% for gene in genes %}
+			<option value="{{ gene }}">{{ gene }}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="Submit">
+	</form>
+	<img src="{{ img }}" alt="beleg" height="500px"><br>
+
+	<form action=/prep2 method="post">
+  <label for="n_pcgs">Number of PCGs to select for computing neighbours.<br><i>Refer to Above figure 1</i></label>
+  <input type="number" id="n_pcgs" name="n_pcgs" value="2"><br>
+		<input type="submit" value="Submit">
+	</form>
+
+
+<!--  <label for="pca">Calculate PCA</label><br>-->
+
+<!--	<h3>Proceed to calculate UMAP of cells based on PCA components:</h3>-->
+<!--	<button type="button" onclick="redirectToNbrPca()">Continue</button>-->
+  {{ plot_div|safe }}
+
+{% endblock content %}

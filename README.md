@@ -6,7 +6,7 @@ It takes only 10x Genomics h5 files for the analysis. An example of the file is 
 
 <ol>1. Download and extract the content of the folder.</ol>
 <ol>2. Using terminal, navigate to the extracted folder. Eg. cd /path/to/folder. </ol>
-<ol>3. Install the necessary python packages by instaling the packages in requirements.txt using pip:</ol>
+<ol>3. Install the necessary python packages in requirements.txt using pip:</ol>
 <pre>pip install -r requirements.txt</pre>
 
 <h3>To run the tool</h3>

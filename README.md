@@ -1,6 +1,6 @@
 # SCANPY_GUI
-A GUI based frameware for single cell RNA-Seq data analysis using scanpy. This tool runs on Python >= 3.7
-This tool takes only 10x Genomics h5 files for the analysis. An example of the file is given in data folder which contains single cell RNA-Seq data of mouse model as an example sequence. 
+A GUI based frameware for single cell RNA-Seq data analysis using scanpy. This tool runs on Python >= 3.7<br>
+It takes only 10x Genomics h5 files for the analysis. An example of the file is given in data folder which contains single cell RNA-Seq data of mouse model as an example sequence. 
 
 <h3>Installation:</h3>
 

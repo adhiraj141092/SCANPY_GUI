@@ -1,6 +1,6 @@
 # SCANPY_GUI
 A GUI based frameware for single cell RNA-Seq data analysis using scanpy. This tool runs on Python >= 3.7<br>
-It takes only 10x Genomics h5 files for the analysis. An example of the file is given in data folder which contains single cell RNA-Seq data of mouse model as an example sequence. 
+It takes only 10x Genomics h5 files for the analysis. An example of the file is given in data folder which contains single cell RNA-Seq data of mouse model as an example. 
 
 <h3>Installation:</h3>
 
@@ -23,7 +23,7 @@ It takes only 10x Genomics h5 files for the analysis. An example of the file is 
 <br>Step 2: Pre-process the data. Select the minimum number of cells a gene is expressed and minimum genes to be expressed in a cell. Enter the mitochondrial gene annotation symbol<br>
 
 ![upload2](https://user-images.githubusercontent.com/102503979/229825757-ffa12510-6285-4c99-ae13-6f35424cd982.png)
-<br>Step 3: Visualize the data and further preprocess the data by entering the maximum transcripts and maximum pct mitochondrial genes. Next:
+<br>Step 3: Visualize the data and further preprocess it by entering the maximum transcripts and maximum pct mitochondrial genes. Next:
 <li>Normalise the data. </li>
 <li>Perform Logarithmic Transformation</li>
 <li>Calculate the highly variable genes</li>
@@ -34,7 +34,7 @@ It takes only 10x Genomics h5 files for the analysis. An example of the file is 
 <br>Step 4: Principal Component Analysis. Select the optimal number of principal components from the scree plot. Visualize the PC1 vs PC2 plot for the genes.<br>
 <br>![upload4](https://user-images.githubusercontent.com/102503979/229825770-5b70e081-e5fe-4771-bfc3-7f9d681dd2a7.png)
 
-<br>Step 5: Uniform Manifold Approximation and Projection (UMAP). A default clustering is done using leiden algorithm. Visualize the UMAP1 vs UMAP2 pot for the genes. 
+<br>Step 5: Uniform Manifold Approximation and Projection (UMAP). A default clustering is done using leiden algorithm. Visualize the UMAP1 vs UMAP2 plot for the genes. 
 <br>![upload5](https://user-images.githubusercontent.com/102503979/229825776-97a6c791-4028-4e0d-8efe-f3cdd72d28ec.png)
 
 

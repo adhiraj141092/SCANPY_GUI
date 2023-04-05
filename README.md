@@ -16,6 +16,7 @@ It takes only 10x Genomics h5 files for the analysis. An example of the file is 
 <pre>127.0.0.1:5000</pre> or 
 <pre>localhost</pre>
 <h4>Follow the steps given below to perform the analysis</h4>
+<I>The dataset in the given steps below is available at 10xgenomics website: <pre>https://cf.10xgenomics.com/samples/cell-exp/6.1.0/40k_NSCLC_DTC_3p_HT_nextgem_Multiplex/40k_NSCLC_DTC_3p_HT_nextgem_Multiplex_count_raw_feature_bc_matrix.h5</pre></I>
 <br>Step 1: Upload the file in .h5 format<br>
 
 ![upload1](https://user-images.githubusercontent.com/102503979/229825745-30f9847c-ac6c-4494-81f1-144d4427927c.png)

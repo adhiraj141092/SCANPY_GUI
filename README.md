@@ -31,7 +31,7 @@ This tool takes only 10x Genomics h5 files for the analysis. An example of the f
 
 ![upload3](https://user-images.githubusercontent.com/102503979/229825766-3412b985-e399-429e-b26c-125e00802e5f.png)
 
-<br>Step 4: Principal Component Analysis. Select the optimal number of principal components from the scree plot. Visualize the PCA1 vs PCA2 plot for the genes.<br>
+<br>Step 4: Principal Component Analysis. Select the optimal number of principal components from the scree plot. Visualize the PC1 vs PC2 plot for the genes.<br>
 <br>![upload4](https://user-images.githubusercontent.com/102503979/229825770-5b70e081-e5fe-4771-bfc3-7f9d681dd2a7.png)
 
 <br>Step 5: Uniform Manifold Approximation and Projection (UMAP). A default clustering is done using leiden algorithm. Visualize the UMAP1 vs UMAP2 pot for the genes. 
